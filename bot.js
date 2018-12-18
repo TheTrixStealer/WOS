@@ -8,13 +8,14 @@ const client = new Discord.Client();
  * received from Discord
  */
 client.on('ready', () => {
+  client.game = "Fortnite";
   console.log('I am ready!');
 });
 
 // Create an event listener for messages
 client.on('message', message => {
   // If the message is "what is my avatar"
-  if (message.content === 'what is my avatar') {
+  if (message.content === 'dab') {
     // Send the user's avatar URL
     message.reply(message.author.avatarURL);
   }
