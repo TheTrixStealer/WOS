@@ -20,11 +20,12 @@ function spin(invokeMessage) {
   var p1 = null;
   var p2 = null;
   var msg = invokeMessage.reply(" ");
-  while(spins > 0 && p1 ~= p2) {
+  while(spins > 0 && p1 != p2) {
     await sleep(150);
     p1 = list[Math.floor(Math.random() * list.length)];
     p2 = list[Math.floor(Math.random() * list.length)];
     msg.edit(p1 + " X " + p2);
+    spins -= 1;
   }
   invokeMessage.reply(msg.edit);
   msg.delete();
