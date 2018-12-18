@@ -11,4 +11,4 @@ client.on('message', msg => {
   }
 });
 
-//console.login(process.env.BOT_TOKEN);
+console.login(process.env.BOT_TOKEN);
