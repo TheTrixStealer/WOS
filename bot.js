@@ -34,7 +34,7 @@ function spin(invokeMessage) {
 client.on('message', message => {
   if(message.content.charAt(1) == prefix) {
     if(message.content.substring(1, 5) == "ship") {
-      spin();
+      spin(message);
     }
   }  
 });
