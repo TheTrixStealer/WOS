@@ -18,6 +18,7 @@ client.on('message', message => {
   if (message.content === 'dab') {
     // Send the user's avatar URL
     message.reply(message.author.avatarURL);
+    client.user.setGame("Fortnite");
   }
 });
 
