@@ -1,5 +1,5 @@
 const Discord = require('discord.js');
-const PastebinAPI = require("Pastebin-js");
+const PastebinAPI = require("pastebin-js");
 // Create an instance of a Discord client
 const client = new Discord.Client();
 const pastebin = new PastebinAPI();
