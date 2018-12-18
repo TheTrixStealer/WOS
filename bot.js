@@ -8,8 +8,8 @@ const client = new Discord.Client();
  * received from Discord
  */
 client.on('ready', () => {
-  client.game = "Fortnite";
   console.log('I am ready!');
+  client.setGame("Fortnite");
 });
 
 // Create an event listener for messages
