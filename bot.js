@@ -9,7 +9,6 @@ const client = new Discord.Client();
  */
 client.on('ready', () => {
   console.log('I am ready!');
-  client.user.setGame("Fortnite");
 });
 
 // Create an event listener for messages
@@ -18,7 +17,6 @@ client.on('message', message => {
   if (message.content === 'dab') {
     // Send the user's avatar URL
     message.reply(message.author.avatarURL);
-    client.user.setGame("Fortnite");
   }
 });
 
