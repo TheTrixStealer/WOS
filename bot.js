@@ -33,6 +33,9 @@ async function spin(invokeMessage) {
 
 // Create an event listener for messages
 client.on('message', message => {
+  console.log(message);
+  console.log(message.content.charAt(1));
+  console.log(message.content.substring(1, 5));
   if(message.content.charAt(1) == prefix) {
     if(message.content.substring(1, 5) == "ship") {
       spin(message);
