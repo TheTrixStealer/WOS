@@ -9,7 +9,7 @@ const client = new Discord.Client();
  */
 client.on('ready', () => {
   console.log('I am ready!');
-  client.setGame("Fortnite");
+  client.user.setGame("Fortnite");
 });
 
 // Create an event listener for messages
