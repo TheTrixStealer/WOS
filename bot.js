@@ -1,14 +1,24 @@
 const Discord = require('discord.js');
+
+// Create an instance of a Discord client
 const client = new Discord.Client();
 
+/**
+ * The ready event is vital, it means that only _after_ this will your bot start reacting to information
+ * received from Discord
+ */
 client.on('ready', () => {
-  console.log(`Logged in as ${client.user.tag}!`);
+  console.log('I am ready!');
 });
 
-client.on('message', msg => {
-  if (msg.content === 'ping') {
-    msg.reply('pong');
+// Create an event listener for messages
+client.on('message', message => {
+  // If the message is "what is my avatar"
+  if (message.content === 'what is my avatar') {
+    // Send the user's avatar URL
+    message.reply(message.author.avatarURL);
   }
 });
+
 
 client.login(process.env.BOT_TOKEN);
