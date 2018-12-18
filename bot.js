@@ -14,7 +14,7 @@ client.on('ready', () => {
   console.log('I am ready!');
 });
 
-function spin(invokeMessage) {
+async function spin(invokeMessage) {
   const list = JSON.parse(pastebin.getPaste(process.env.SHIP_LIST_URL));
   var spins = 100;
   var p1 = null;
