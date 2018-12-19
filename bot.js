@@ -19,7 +19,7 @@ async function spin(invokeMessage) {
   var spins = 100;
   var p1 = null;
   var p2 = null;
-  var message = invokeMessage.reply(" ").then((msg) => {return msg;});
+  var message = invokeMessage.reply(" ").then((msg) => {return msg;}).catch((err) => {});
   while(spins > 0 && p1 != p2) {
     await sleep(150);
     p1 = list[Math.floor(Math.random() * list.length)];
